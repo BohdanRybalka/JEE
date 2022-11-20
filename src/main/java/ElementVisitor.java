@@ -1,21 +1,33 @@
+import java.util.TreeMap;
+
 public class ElementVisitor implements DataElementVisitor {
     @Override
-    public void visit(Stats stats) {
-        System.out.println("Stats: " + stats.getStats());
+    public TreeMap<String, String> visit(Stats stats) {
+        TreeMap<String, String>  res = new TreeMap<>();
+        for(String key: stats.getStats().keySet()){
+            res.put(key, stats.getStats().get(key).toString());
+        }
+        return res;
     }
 
     @Override
-    public void visit(Character character) {
-        System.out.println("Character name: " + character.getName());
+    public TreeMap<String, String> visit(Character character) {
+        TreeMap<String, String>  res = new TreeMap<>();
+        res.put("Name", character.getName());
+        return res;
     }
 
     @Override
-    public void visit(CharacterRace characterRace) {
-        System.out.println("Race: " + characterRace.getRace() + ", bonuses: " + characterRace.getBonuses());
+    public TreeMap<String, String> visit(CharacterRace characterRace) {
+        TreeMap<String, String>  res = new TreeMap<>();
+        res.put("Race", characterRace.getRace());
+        return res;
     }
 
     @Override
-    public void visit(CharacterClass characterClass) {
-        System.out.println("Class: " + characterClass.getType() + ", initial hp: " + characterClass.getHP());
+    public TreeMap<String, String> visit(CharacterClass characterClass) {
+        TreeMap<String, String>  res = new TreeMap<>();
+        res.put("Class", characterClass.getType());
+        return res;
     }
 }

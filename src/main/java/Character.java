@@ -1,3 +1,5 @@
+import java.util.TreeMap;
+
 public class Character implements DataElement{
     private String name;
     private CharacterRace race;
@@ -9,17 +11,11 @@ public class Character implements DataElement{
         attributes = Stats.generate();
     }
 
-    public Character(String name, CharacterRace dndClass, Stats attributes) {
-        this.name = name;
-        this.race = dndClass;
-        this.attributes = attributes;
-    }
-
     @Override
-    public void accept(DataElementVisitor visitor) {
-        visitor.visit(this);
-        visitor.visit(race);
-        visitor.visit(attributes);
+    public void accept(DataElementVisitor visitor, TreeMap<String, String> map) {
+        map.putAll(visitor.visit(this));
+        map.putAll(visitor.visit(race));
+        map.putAll(visitor.visit(attributes));
     }
 
     public String getName() {

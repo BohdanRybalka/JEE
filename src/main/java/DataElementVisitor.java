@@ -1,6 +1,8 @@
+import java.util.TreeMap;
+
 public interface DataElementVisitor {
-    void visit(Stats stats);
-    void visit(Character character);
-    void visit(CharacterRace characterRace);
-    void visit(CharacterClass characterClass);
+    TreeMap<String, String> visit(Stats stats);
+    TreeMap<String, String> visit(Character character);
+    TreeMap<String, String> visit(CharacterRace characterRace);
+    TreeMap<String, String> visit(CharacterClass characterClass);
 }

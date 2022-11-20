@@ -1,3 +1,5 @@
+import java.util.TreeMap;
+
 public class Dwarf extends CharacterRace{
     public Dwarf() {
         this.race = "Dwarf (Hill)";
@@ -5,8 +7,8 @@ public class Dwarf extends CharacterRace{
     }
 
     @Override
-    public void accept(DataElementVisitor visitor) {
-        visitor.visit(this);
+    public void accept(DataElementVisitor visitor, TreeMap<String, String> map) {
+        map.putAll(visitor.visit(this));
     }
 
     @Override
