@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/LW-9-Threads.iml" filepath="$PROJECT_DIR$/.idea/LW-9-Threads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PracticeJavaEE-practice9/Threads/Threads.iml" filepath="$PROJECT_DIR$/PracticeJavaEE-practice9/Threads/Threads.iml" />
+    </modules>
+  </component>
+</project>
