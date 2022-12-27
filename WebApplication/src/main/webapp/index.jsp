@@ -23,7 +23,7 @@
                 margin: auto;
             }
             body {
-                background-image: url('https://static.educalingo.com/img/ru/800/nebo.jpg');
+                background-image: url('https://html.sammy-codes.com/images/background.jpg');
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
